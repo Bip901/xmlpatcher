@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "xmlpatcher"
-version = "1.0.1"
+version = "1.0.2"
 authors = [
   { name="Bip901", email="74911767+Bip901@users.noreply.github.com" },
 ]

@@ -22,4 +22,6 @@ class AddChild(Patch):
         for obj in objects:
             if not isinstance(obj, _Element):
                 raise ValueError(f"Can only use the AddChild patch on an element. Got: {type(obj)}")
-            obj.append(Element(self.child_name, text=self.child_value))
+            child = Element(self.child_name)
+            child.text = self.child_value
+            obj.append(child)
