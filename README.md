@@ -1,5 +1,7 @@
 # XML Patcher
 
+[![Latest release on pypi.org](https://img.shields.io/pypi/v/xmlpatcher.svg)](https://pypi.org/project/xmlpatcher/)
+
 A convenient library for patching XML files with XPath.
 
 Usage example:
