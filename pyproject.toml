@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "xmlpatcher"
+version = "0.0.1"
+authors = [
+  { name="Bip901", email="74911767+Bip901@users.noreply.github.com" },
+]
+description = "A convenient library for patching XML files with XPath."
+readme = "README.md"
+requires-python = ">=3.7"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+dependencies = [
+  "lxml~=4.9.3"
+]
+
+[project.urls]
+"Homepage" = "https://github.com/TODO"
+
+[tool.ruff]
+select = ["E", "F", "B", "I"]
+line-length = 120
+target-version = "py39"
+
+[tool.black]
+line-length = 120
