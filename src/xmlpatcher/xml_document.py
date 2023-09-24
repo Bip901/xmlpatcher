@@ -3,7 +3,7 @@ from io import BytesIO
 from os import remove
 from pathlib import Path
 from tempfile import NamedTemporaryFile
-from typing import IO, Generator, Union
+from typing import IO, Generator, Optional, Union
 
 import lxml.etree
 
@@ -11,12 +11,12 @@ from .patches import Patch
 
 
 class XMLDocument:
-    def __init__(self, path: Union[Path, str]) -> None:
+    def __init__(self, path: Union[Path, str], encoding: Optional[str] = None, remove_blank_text: bool = True) -> None:
         if isinstance(path, str):
             path = Path(path)
         self._path = path
-        with path.open() as f:
-            parser = lxml.etree.XMLParser(remove_blank_text=True)
+        with path.open("rb") as f:
+            parser = lxml.etree.XMLParser(encoding=encoding, remove_blank_text=remove_blank_text)
             self._tree: lxml.etree._ElementTree = lxml.etree.parse(f, parser)
 
     def patch(self, *patches: Patch) -> "XMLDocument":
