@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "xmlpatcher"
-version = "0.0.1"
+version = "1.0.0"
 authors = [
   { name="Bip901", email="74911767+Bip901@users.noreply.github.com" },
 ]
@@ -21,7 +21,7 @@ dependencies = [
 ]
 
 [project.urls]
-"Homepage" = "https://github.com/TODO"
+"Homepage" = "https://github.com/Bip901/xmlpatcher"
 
 [tool.ruff]
 select = ["E", "F", "B", "I"]
