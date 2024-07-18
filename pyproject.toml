@@ -17,16 +17,18 @@ classifiers = [
     "Operating System :: OS Independent",
 ]
 dependencies = [
-  "lxml~=4.9.3"
+  "lxml>=4.9.3,<5"
 ]
 
 [project.urls]
 "Homepage" = "https://github.com/Bip901/xmlpatcher"
 
 [tool.ruff]
-select = ["E", "F", "B", "I"]
 line-length = 120
-target-version = "py39"
 
-[tool.black]
-line-length = 120
+[tool.ruff.lint]
+select = ["E", "F", "B", "I", "N", "W", "D417", "UP", "YTT", "ANN"]
+ignore = ["ANN101", "ANN102"]
+
+[tool.mypy]
+exclude = "venv"
