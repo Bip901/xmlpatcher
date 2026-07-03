@@ -4,8 +4,8 @@ from .remove import Remove
 from .set_value import SetValue
 
 __all__ = [
-    "Patch",
     "AddChild",
-    "SetValue",
+    "Patch",
     "Remove",
+    "SetValue",
 ]

@@ -1,4 +1,5 @@
-from typing import Any, Iterable, Optional
+from collections.abc import Iterable
+from typing import Any
 
 from lxml.etree import _Element, _ElementUnicodeResult
 
@@ -6,7 +7,7 @@ from .patch import Patch
 
 
 class SetValue(Patch):
-    def __init__(self, xpath: str, new_value: Optional[str]) -> None:
+    def __init__(self, xpath: str, new_value: str | None) -> None:
         """
         Sets the text of an element, or sets the value of an attribute, or removes an attribute.
 
